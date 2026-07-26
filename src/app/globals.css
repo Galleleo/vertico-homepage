@@ -1,1 +1,35 @@
 @import "tailwindcss";
+
+@import "@fontsource/oswald/600.css";
+@import "@fontsource/oswald/700.css";
+@import "@fontsource/work-sans/400.css";
+@import "@fontsource/work-sans/500.css";
+@import "@fontsource/work-sans/600.css";
+
+@theme {
+  --color-ink: #1a252f;
+  --color-primary: #2c3e50;
+  --color-primary-hover: #1a252f;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f4f5f6;
+  --color-border: #d8dce0;
+  --color-on-dark: #eef1f3;
+
+  --font-heading: "Oswald", sans-serif;
+  --font-body: "Work Sans", sans-serif;
+
+  --radius-sharp: 2px;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
