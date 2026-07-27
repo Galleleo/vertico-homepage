@@ -8,7 +8,8 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-12 grid gap-8 md:grid-cols-3">
         <div>
           <Logo className="h-12 w-auto" tone="light" />
-          <p className="mt-4 font-body text-sm">
+          <p className="mt-4 font-body text-sm font-semibold">{COMPANY.name}</p>
+          <p className="font-body text-sm">
             {COMPANY.street}
             <br />
             {COMPANY.zip} {COMPANY.city}
