@@ -21,7 +21,13 @@ export function ServiceCard({ href, title, description, media }: ServiceCardProp
     >
       <div className="relative h-48 w-full bg-surface-alt flex items-center justify-center">
         {media.type === "image" ? (
-          <Image src={media.src} alt={media.alt} fill className="object-cover" />
+          <Image
+            src={media.src}
+            alt={media.alt}
+            fill
+            sizes="(min-width: 768px) 33vw, 100vw"
+            className="object-cover"
+          />
         ) : (
           <div className="text-primary h-20 w-20">{media.icon}</div>
         )}

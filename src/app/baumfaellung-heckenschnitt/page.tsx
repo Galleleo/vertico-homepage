@@ -24,7 +24,8 @@ export default function BaumfaellungPage() {
           src="/images/baumfaellung-winter-2.jpg"
           alt="Baumkletterer in Seilzugangstechnik arbeitet hoch oben an der Krone einer hohen Fichte, darunter ein Mitarbeiter am Boden, mehrere Wohnhäuser im Hintergrund, kahle Winterbäume"
           fill
-          className="object-cover rounded-[var(--radius-sharp)]"
+          sizes="(min-width: 768px) 1152px, 100vw"
+          className="object-cover object-[50%_15%] rounded-[var(--radius-sharp)]"
         />
       </div>
 
