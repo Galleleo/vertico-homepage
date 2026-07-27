@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import { ServiceCard } from "@/components/ServiceCard";
 import { WhyVertico } from "@/components/WhyVertico";
+import { CtaButton } from "@/components/CtaButton";
 import { DryerIcon } from "@/components/icons/MachineIcons";
 import { buildMetadata } from "@/lib/metadata";
 import { COMPANY } from "@/lib/site-data";
@@ -33,12 +33,9 @@ export default function Home() {
             Höhenarbeiten aus einer Hand – sicher, geprüft und mit kurzen Wegen aus{" "}
             {COMPANY.city}.
           </p>
-          <Link
-            href="/kontakt"
-            className="inline-block mt-6 bg-primary hover:bg-primary-hover text-on-dark font-body px-6 py-3 rounded-[var(--radius-sharp)] transition-colors"
-          >
-            Kontakt aufnehmen
-          </Link>
+          <div className="mt-6">
+            <CtaButton href="/kontakt">Kontakt aufnehmen</CtaButton>
+          </div>
         </div>
       </section>
 
@@ -80,12 +77,7 @@ export default function Home() {
             Sie haben einen Baum, ein Gerät oder eine Anlage, die hoch hinaus muss? Schreiben
             Sie uns – wir melden uns kurzfristig zurück.
           </p>
-          <Link
-            href="/kontakt"
-            className="inline-block bg-primary hover:bg-primary-hover text-on-dark font-body px-6 py-3 rounded-[var(--radius-sharp)] transition-colors"
-          >
-            Zum Kontaktformular
-          </Link>
+          <CtaButton href="/kontakt">Zum Kontaktformular</CtaButton>
         </div>
       </section>
     </>

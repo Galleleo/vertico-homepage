@@ -1,10 +1,14 @@
 "use server";
 
-import { validateContactForm, type ContactFormInput } from "@/lib/contact-validation";
+import {
+  validateContactForm,
+  type ContactFormInput,
+  type ContactFormErrors,
+} from "@/lib/contact-validation";
 
 export type ContactFormState = {
   status: "idle" | "success" | "error";
-  errors: Partial<Record<keyof ContactFormInput, string>>;
+  errors: ContactFormErrors;
 };
 
 export async function submitContactForm(

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import { buildMetadata } from "@/lib/metadata";
+import { CtaButton } from "@/components/CtaButton";
 
 export const metadata = buildMetadata({
   title: "Baumfällung & Heckenschnitt",
@@ -35,12 +35,7 @@ export default function BaumfaellungPage() {
         <li>Kronensicherung und Kronenpflege</li>
       </ul>
 
-      <Link
-        href="/kontakt"
-        className="inline-block bg-primary hover:bg-primary-hover text-on-dark font-body px-6 py-3 rounded-[var(--radius-sharp)] transition-colors"
-      >
-        Baumarbeiten anfragen
-      </Link>
+      <CtaButton href="/kontakt">Baumarbeiten anfragen</CtaButton>
     </div>
   );
 }
