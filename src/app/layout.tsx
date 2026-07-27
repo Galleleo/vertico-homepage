@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { buildMetadata } from "@/lib/metadata";
+import { COMPANY } from "@/lib/site-data";
 import "./globals.css";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Startseite",
-  description:
-    "Vertico – Bremische Spezialtechnik: Maschinenverleih, Baumfällung & Heckenschnitt sowie Kletter- und Höhenarbeiten aus Hagen im Bremischen.",
-  path: "/",
-});
+export const metadata: Metadata = {
+  metadataBase: new URL("https://vertico-spezialtechnik.de"),
+  title: COMPANY.name,
+  description: "Maschinenverleih, Baumfällung und Kletter- bzw. Höhenarbeiten aus Hagen im Bremischen.",
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    siteName: COMPANY.name,
+  },
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
