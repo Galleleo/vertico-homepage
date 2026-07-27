@@ -10,7 +10,7 @@ export const metadata = buildMetadata({
 export default function DatenschutzPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 font-body">
-      <h1 className="text-4xl mb-8">Datenschutzerklärung</h1>
+      <h1 className="text-4xl mb-8 break-words">Datenschutzerklärung</h1>
 
       <h2 className="text-2xl mt-8 mb-3">1. Verantwortlicher</h2>
       <p>
