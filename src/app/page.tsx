@@ -22,10 +22,11 @@ export default function Home() {
           alt="Seilzugangstechniker bei der Arbeit an einer Windkraftanlage vor Hügellandschaft mit Windrädern"
           fill
           priority
-          className="object-cover -z-10"
+          sizes="100vw"
+          className="object-cover"
         />
-        <div className="absolute inset-0 bg-ink/50 -z-10" />
-        <div className="mx-auto max-w-6xl px-4 pb-16 text-on-dark">
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/55 to-ink/25 z-0" />
+        <div className="relative z-10 mx-auto max-w-6xl px-4 pb-16 text-on-dark">
           <h1 className="text-4xl md:text-6xl max-w-2xl">Alles, was hoch hinaus muss.</h1>
           <p className="font-body mt-4 max-w-xl">
             {COMPANY.name} steht für Maschinenverleih, Baumfällung und Kletter- bzw.
