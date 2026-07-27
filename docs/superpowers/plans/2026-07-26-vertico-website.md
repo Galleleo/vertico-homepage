@@ -593,7 +593,7 @@ Run (from repo root; source files already exist under `images/`, do not delete t
 ```bash
 mkdir -p public/images
 cp "images/WhatsApp Image 2026-07-11 at 10.27.56.jpeg" public/images/hero-banner.jpg
-cp "images/WhatsApp Image 2026-07-11 at 10.25.28.jpeg" public/images/baumfaellung-winter-1.jpg
+cp "images/WhatsApp Image 2026-07-11 at 10.32.40 (5).jpeg" public/images/baumfaellung-winter-1.jpg
 cp "images/WhatsApp Image 2026-07-11 at 10.32.41.jpeg" public/images/baumfaellung-winter-2.jpg
 cp "images/WhatsApp Image 2026-07-11 at 10.32.42.jpeg" public/images/windkraft-seilzugang-1.jpg
 cp "images/header_logo_700x280.png" public/images/logo-referenz.png
