@@ -21,8 +21,8 @@ export default function BaumfaellungPage() {
 
       <div className="relative h-72 md:h-96 w-full mb-12">
         <Image
-          src="/images/baumfaellung-winter-1.jpg"
-          alt="Baumkletterer in Seilzugangstechnik sägt hoch oben mit der Kettensäge einen entasteten Stamm ab, Sägespäne fliegen vor blauem Himmel, im Hintergrund Wohnhäuser"
+          src="/images/baumfaellung-winter-2.jpg"
+          alt="Baumkletterer in Seilzugangstechnik arbeitet hoch oben an der Krone einer hohen Fichte, darunter ein Mitarbeiter am Boden, mehrere Wohnhäuser im Hintergrund, kahle Winterbäume"
           fill
           className="object-cover rounded-[var(--radius-sharp)]"
         />
