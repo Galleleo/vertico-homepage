@@ -1,3 +1,92 @@
+import Image from "next/image";
+import Link from "next/link";
+import { ServiceCard } from "@/components/ServiceCard";
+import { WhyVertico } from "@/components/WhyVertico";
+import { DryerIcon } from "@/components/icons/MachineIcons";
+import { buildMetadata } from "@/lib/metadata";
+import { COMPANY } from "@/lib/site-data";
+
+export const metadata = buildMetadata({
+  title: "Startseite",
+  description:
+    "Vertico – Bremische Spezialtechnik: Maschinenverleih, Baumfällung & Heckenschnitt sowie Kletter- und Höhenarbeiten aus Hagen im Bremischen.",
+  path: "/",
+});
+
 export default function Home() {
-  return <main>Vertico</main>;
+  return (
+    <>
+      <section className="relative h-[70vh] min-h-[420px] w-full flex items-end">
+        <Image
+          src="/images/hero-banner.jpg"
+          alt="Seilzugangstechniker bei der Arbeit an einer Windkraftanlage vor Hügellandschaft mit Windrädern"
+          fill
+          priority
+          className="object-cover -z-10"
+        />
+        <div className="absolute inset-0 bg-ink/50 -z-10" />
+        <div className="mx-auto max-w-6xl px-4 pb-16 text-on-dark">
+          <h1 className="text-4xl md:text-6xl max-w-2xl">Alles, was hoch hinaus muss.</h1>
+          <p className="font-body mt-4 max-w-xl">
+            {COMPANY.name} steht für Maschinenverleih, Baumfällung und Kletter- bzw.
+            Höhenarbeiten aus einer Hand – sicher, geprüft und mit kurzen Wegen aus{" "}
+            {COMPANY.city}.
+          </p>
+          <Link
+            href="/kontakt"
+            className="inline-block mt-6 bg-primary hover:bg-primary-hover text-on-dark font-body px-6 py-3 rounded-[var(--radius-sharp)] transition-colors"
+          >
+            Kontakt aufnehmen
+          </Link>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-16 grid gap-8 md:grid-cols-3">
+        <ServiceCard
+          href="/maschinenverleih"
+          title="Maschinenverleih"
+          description="Geprüfte, gewartete Maschinen zur kurz- und langfristigen Miete."
+          media={{ type: "icon", icon: <DryerIcon className="h-full w-full" /> }}
+        />
+        <ServiceCard
+          href="/baumfaellung-heckenschnitt"
+          title="Baumfällung & Heckenschnitt"
+          description="Fällung in Seilzugangstechnik oder mit dem Steiger, plus Grünpflege."
+          media={{
+            type: "image",
+            src: "/images/baumfaellung-winter-1.jpg",
+            alt: "Zwei Baumkletterer in Seilzugangstechnik bei der Kronenpflege im Winter",
+          }}
+        />
+        <ServiceCard
+          href="/kletter-hoehenarbeiten"
+          title="Kletter- & Höhenarbeiten"
+          description="Seilzugang an schwer zugänglichen Bauwerken, inklusive Windkraftanlagen."
+          media={{
+            type: "image",
+            src: "/images/windkraft-seilzugang-1.jpg",
+            alt: "Seilzugangstechniker bei der Wartung eines Rotorblatts an einer Windkraftanlage",
+          }}
+        />
+      </section>
+
+      <WhyVertico />
+
+      <section className="bg-surface-alt">
+        <div className="mx-auto max-w-6xl px-4 py-16 flex flex-col items-start gap-4">
+          <h2 className="text-3xl">Kontakt</h2>
+          <p className="font-body max-w-xl">
+            Sie haben einen Baum, ein Gerät oder eine Anlage, die hoch hinaus muss? Schreiben
+            Sie uns – wir melden uns kurzfristig zurück.
+          </p>
+          <Link
+            href="/kontakt"
+            className="inline-block bg-primary hover:bg-primary-hover text-on-dark font-body px-6 py-3 rounded-[var(--radius-sharp)] transition-colors"
+          >
+            Zum Kontaktformular
+          </Link>
+        </div>
+      </section>
+    </>
+  );
 }
