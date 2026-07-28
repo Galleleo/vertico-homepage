@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
 export default function Home() {
   return (
     <>
-      <section className="relative h-[70vh] min-h-[420px] w-full flex items-end">
+      <section className="relative h-[70vh] min-h-[420px] w-full flex items-end bg-ink">
         <Image
           src="/images/hero-banner.jpg"
           alt="Seilzugangstechniker bei der Arbeit an einer Windkraftanlage vor Hügellandschaft mit Windrädern"
