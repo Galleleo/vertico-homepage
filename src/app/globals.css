@@ -33,3 +33,28 @@ h1, h2, h3 {
   letter-spacing: 0.01em;
   line-height: 1.1;
 }
+
+@keyframes float-drone {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(2deg); }
+}
+
+@keyframes float-logo-icon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float-drone {
+  animation: float-drone 4.5s ease-in-out infinite;
+}
+
+.animate-float-logo-icon {
+  animation: float-logo-icon 5.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-drone,
+  .animate-float-logo-icon {
+    animation: none;
+  }
+}

@@ -3,6 +3,8 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { WhyVertico } from "@/components/WhyVertico";
 import { CtaButton } from "@/components/CtaButton";
 import { DryerIcon } from "@/components/icons/MachineIcons";
+import { DroneIcon } from "@/components/icons/DroneIcon";
+import { TreeLogoIcon } from "@/components/icons/TreeLogoIcon";
 import { buildMetadata } from "@/lib/metadata";
 import { COMPANY } from "@/lib/site-data";
 
@@ -26,6 +28,12 @@ export default function Home() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/55 to-ink/25 z-0" />
+        <TreeLogoIcon
+          className="animate-float-logo-icon absolute left-[24%] top-[6%] z-[5] hidden h-32 w-auto text-ink/80 drop-shadow-md md:block md:h-40 lg:h-48"
+        />
+        <DroneIcon
+          className="animate-float-drone absolute right-[10%] top-[9%] z-[5] hidden h-10 w-auto text-ink/80 drop-shadow-md sm:block md:h-14"
+        />
         <div className="relative z-10 mx-auto max-w-6xl px-4 pb-16 text-on-dark">
           <h1 className="text-4xl md:text-6xl max-w-2xl">Alles, was hoch hinaus muss.</h1>
           <p className="font-body mt-4 max-w-xl">
