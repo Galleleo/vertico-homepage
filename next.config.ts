@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
+  basePath: "/vertico-homepage",
+  assetPrefix: "/vertico-homepage/",
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;

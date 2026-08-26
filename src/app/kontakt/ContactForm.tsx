@@ -1,14 +1,37 @@
 "use client";
 
-import { useActionState } from "react";
-import { submitContactForm, type ContactFormState } from "./actions";
-
-const initialState: ContactFormState = { status: "idle", errors: {} };
+import { useState, type FormEvent } from "react";
+import {
+  validateContactForm,
+  type ContactFormErrors,
+} from "@/lib/contact-validation";
 
 export function ContactForm() {
-  const [state, formAction, pending] = useActionState(submitContactForm, initialState);
+  const [errors, setErrors] = useState<ContactFormErrors>({});
+  const [submitted, setSubmitted] = useState(false);
 
-  if (state.status === "success") {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const input = {
+      name: String(formData.get("name") ?? ""),
+      email: String(formData.get("email") ?? ""),
+      phone: String(formData.get("phone") ?? ""),
+      message: String(formData.get("message") ?? ""),
+    };
+
+    const validationErrors = validateContactForm(input);
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length === 0) {
+      // TODO: echten Versand anbinden (z. B. E-Mail-Zustellung). Aktuell wird die
+      // Anfrage nur validiert und nicht weitergeleitet.
+      setSubmitted(true);
+    }
+  }
+
+  if (submitted) {
     return (
       <p
         role="status"
@@ -20,7 +43,7 @@ export function ContactForm() {
   }
 
   return (
-    <form action={formAction} className="flex flex-col gap-4 max-w-lg">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-lg">
       <label htmlFor="name" className="flex flex-col gap-1">
         <span className="font-body text-sm">Name</span>
         <input
@@ -29,13 +52,13 @@ export function ContactForm() {
           type="text"
           required
           autoComplete="name"
-          aria-invalid={Boolean(state.errors.name)}
-          aria-describedby={state.errors.name ? "name-error" : undefined}
+          aria-invalid={Boolean(errors.name)}
+          aria-describedby={errors.name ? "name-error" : undefined}
           className="border border-border p-3 rounded-[var(--radius-sharp)]"
         />
-        {state.errors.name && (
+        {errors.name && (
           <span id="name-error" role="alert" className="text-sm text-red-700">
-            {state.errors.name}
+            {errors.name}
           </span>
         )}
       </label>
@@ -48,13 +71,13 @@ export function ContactForm() {
           type="email"
           required
           autoComplete="email"
-          aria-invalid={Boolean(state.errors.email)}
-          aria-describedby={state.errors.email ? "email-error" : undefined}
+          aria-invalid={Boolean(errors.email)}
+          aria-describedby={errors.email ? "email-error" : undefined}
           className="border border-border p-3 rounded-[var(--radius-sharp)]"
         />
-        {state.errors.email && (
+        {errors.email && (
           <span id="email-error" role="alert" className="text-sm text-red-700">
-            {state.errors.email}
+            {errors.email}
           </span>
         )}
       </label>
@@ -77,23 +100,22 @@ export function ContactForm() {
           name="message"
           rows={5}
           required
-          aria-invalid={Boolean(state.errors.message)}
-          aria-describedby={state.errors.message ? "message-error" : undefined}
+          aria-invalid={Boolean(errors.message)}
+          aria-describedby={errors.message ? "message-error" : undefined}
           className="border border-border p-3 rounded-[var(--radius-sharp)]"
         />
-        {state.errors.message && (
+        {errors.message && (
           <span id="message-error" role="alert" className="text-sm text-red-700">
-            {state.errors.message}
+            {errors.message}
           </span>
         )}
       </label>
 
       <button
         type="submit"
-        disabled={pending}
         className="bg-primary hover:bg-primary-hover text-on-dark font-body px-6 py-3 rounded-[var(--radius-sharp)] transition-colors disabled:opacity-50"
       >
-        {pending ? "Wird gesendet…" : "Nachricht senden"}
+        Nachricht senden
       </button>
     </form>
   );
