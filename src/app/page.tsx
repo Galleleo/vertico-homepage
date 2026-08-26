@@ -37,9 +37,10 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-6xl px-4 pb-16 text-on-dark">
           <h1 className="text-4xl md:text-6xl max-w-2xl">Alles, was hoch hinaus muss.</h1>
           <p className="font-body mt-4 max-w-xl">
-            {COMPANY.name} steht für Maschinenverleih, Baumfällung und Kletter- bzw.
-            Höhenarbeiten aus einer Hand – sicher, geprüft und mit kurzen Wegen aus{" "}
-            {COMPANY.city}.
+            {COMPANY.name} ist ein Unternehmen aus {COMPANY.city} für Maschinenverleih,
+            Baumfällung, Heckenschnitt sowie Kletter- und Höhenarbeiten – inklusive Wartung
+            und Inspektion von Windkraftanlagen. Bei uns arbeiten ausschließlich zertifizierte
+            Mitarbeiter und zertifizierte Seiltechniker.
           </p>
           <div className="mt-6">
             <CtaButton href="/kontakt">Kontakt aufnehmen</CtaButton>

@@ -9,8 +9,8 @@ export const COMPANY = {
 } as const;
 
 export const NAV_ITEMS: { href: string; label: string }[] = [
-  { href: "/maschinenverleih", label: "Maschinenverleih" },
-  { href: "/baumfaellung-heckenschnitt", label: "Baumfällung & Heckenschnitt" },
   { href: "/kletter-hoehenarbeiten", label: "Kletter- & Höhenarbeiten" },
+  { href: "/baumfaellung-heckenschnitt", label: "Baumfällung & Heckenschnitt" },
+  { href: "/maschinenverleih", label: "Maschinenverleih" },
   { href: "/kontakt", label: "Kontakt" },
 ];

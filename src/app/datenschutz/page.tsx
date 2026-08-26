@@ -61,11 +61,28 @@ export default function DatenschutzPage() {
 
       <h2 className="text-2xl mt-8 mb-3">6. Ihre Rechte</h2>
       <p>
-        Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der
-        Verarbeitung Ihrer personenbezogenen Daten sowie ein Widerspruchsrecht gegen die
-        Verarbeitung und ein Recht auf Datenübertragbarkeit. Wenden Sie sich hierzu an{" "}
-        {COMPANY.email}. Außerdem steht Ihnen ein Beschwerderecht bei einer
-        Datenschutzaufsichtsbehörde zu.
+        Ihnen stehen bezüglich Ihrer personenbezogenen Daten folgende Rechte zu. Wenden Sie
+        sich hierzu an {COMPANY.email}.
+      </p>
+      <ul className="list-disc list-inside mt-3 space-y-1">
+        <li>Art. 15 DSGVO – Recht auf Auskunft</li>
+        <li>Art. 16 DSGVO – Recht auf Berichtigung</li>
+        <li>Art. 17 DSGVO – Recht auf Löschung</li>
+        <li>Art. 18 DSGVO – Recht auf Einschränkung der Verarbeitung</li>
+        <li>Art. 20 DSGVO – Recht auf Datenübertragbarkeit</li>
+        <li>Art. 21 DSGVO – Widerspruchsrecht</li>
+      </ul>
+
+      <h2 className="text-2xl mt-8 mb-3">7. Beschwerderecht bei einer Aufsichtsbehörde</h2>
+      <p>
+        Unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen
+        Rechtsbehelfs steht Ihnen ein Beschwerderecht bei einer Datenschutzaufsichtsbehörde
+        zu, insbesondere in dem Mitgliedstaat Ihres Aufenthaltsorts, Ihres Arbeitsplatzes
+        oder des Orts des mutmaßlichen Verstoßes. Zuständige Aufsichtsbehörde ist:
+      </p>
+      <p className="mt-3">
+        Die Landesbeauftragte für Datenschutz und Informationsfreiheit der Freien
+        Hansestadt Bremen
       </p>
     </div>
   );

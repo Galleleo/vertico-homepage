@@ -32,6 +32,7 @@ export default function KletterHoehenarbeitenPage() {
       <ul className="font-body list-disc list-inside mb-12 space-y-1">
         <li>Allgemeine Kletter- und Höhenarbeiten in Seilzugangstechnik</li>
         <li>Wartung und Inspektion von Windkraftanlagen (Seilzugang an Rotorblatt und Turm)</li>
+        <li>Rotorblatt-Reparatur</li>
         <li>Arbeiten an schwer zugänglichen Bauwerken</li>
       </ul>
 
