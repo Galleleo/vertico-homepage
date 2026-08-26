@@ -1,11 +1,13 @@
 import type { NextConfig } from "next";
+import { BASE_PATH } from "./src/lib/base-path";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/vertico-homepage",
-  assetPrefix: "/vertico-homepage/",
+  basePath: BASE_PATH,
+  assetPrefix: `${BASE_PATH}/`,
   images: {
-    unoptimized: true,
+    loader: "custom",
+    loaderFile: "./src/lib/image-loader.ts",
   },
 };
 
