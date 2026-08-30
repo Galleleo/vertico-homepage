@@ -3,8 +3,6 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { WhyVertico } from "@/components/WhyVertico";
 import { CtaButton } from "@/components/CtaButton";
 import { DryerIcon } from "@/components/icons/MachineIcons";
-import { DroneIcon } from "@/components/icons/DroneIcon";
-import { TreeLogoIcon } from "@/components/icons/TreeLogoIcon";
 import { buildMetadata } from "@/lib/metadata";
 import { COMPANY } from "@/lib/site-data";
 
@@ -27,12 +25,40 @@ export default function Home() {
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/55 to-ink/25 z-0" />
-        <TreeLogoIcon
-          className="animate-float-logo-icon absolute left-[24%] top-[6%] z-[5] hidden h-32 w-auto text-ink/80 drop-shadow-md md:block md:h-40 lg:h-48"
-        />
-        <DroneIcon
-          className="animate-float-drone absolute right-[10%] top-[9%] z-[5] hidden h-10 w-auto text-ink/80 drop-shadow-md sm:block md:h-14"
+        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-ink/80 via-ink/35 to-transparent z-0" />
+        <div className="absolute inset-x-0 top-[6%] z-[5] hidden md:block">
+          <div className="mx-auto max-w-6xl px-4 flex justify-start">
+            <div
+              className="h-20 w-auto opacity-85 drop-shadow-md md:h-24 lg:h-28"
+              style={{ aspectRatio: "3799 / 1322" }}
+            >
+              <div className="relative h-full w-full">
+                <Image
+                  src="/images/vertico-logo-text-only.png"
+                  alt="Vertico – Bremische Spezialtechnik"
+                  fill
+                  sizes="320px"
+                  className="object-contain"
+                />
+                <Image
+                  src="/images/vertico-logo-icon-hero.png"
+                  alt=""
+                  aria-hidden="true"
+                  width={863}
+                  height={1136}
+                  className="animate-float-logo-icon absolute left-0 top-0 h-[85.93%] w-[22.72%]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <Image
+          src="/images/drone-cutout.png"
+          alt=""
+          aria-hidden="true"
+          width={160}
+          height={70}
+          className="animate-float-drone absolute left-[63%] top-[28%] z-[5] hidden h-10 w-auto drop-shadow-md sm:block md:h-14"
         />
         <div className="relative z-10 mx-auto max-w-6xl px-4 pb-16 text-on-dark">
           <h1 className="text-4xl md:text-6xl max-w-2xl">Alles, was hoch hinaus muss.</h1>

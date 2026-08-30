@@ -30,16 +30,13 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-surface border-b border-border">
       <div className="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between">
-        <Link
-          href="/"
-          className="flex items-center gap-2"
-          aria-label="Zur Startseite"
-          onClick={() => setOpen(false)}
-        >
-          <Logo className="h-10 w-auto" tone="dark" />
-        </Link>
-
         <nav aria-label="Hauptnavigation" className="hidden md:flex gap-6">
+          <Link
+            href="/"
+            className="font-body text-sm text-ink hover:text-primary border-b border-transparent hover:border-primary transition-colors"
+          >
+            Start
+          </Link>
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}
@@ -50,6 +47,15 @@ export function Header() {
             </Link>
           ))}
         </nav>
+
+        <Link
+          href="/"
+          className="flex items-center gap-2"
+          aria-label="Zur Startseite"
+          onClick={() => setOpen(false)}
+        >
+          <Logo className="h-10 w-auto" tone="dark" />
+        </Link>
 
         <button
           type="button"
@@ -71,6 +77,9 @@ export function Header() {
           aria-label="Mobile Navigation"
           className="md:hidden fixed inset-0 top-16 bg-surface flex flex-col items-center gap-6 pt-12"
         >
+          <Link href="/" onClick={() => setOpen(false)} className="font-heading text-2xl text-ink">
+            Start
+          </Link>
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}

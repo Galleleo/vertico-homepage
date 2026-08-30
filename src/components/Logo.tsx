@@ -6,9 +6,9 @@ type LogoProps = {
 };
 
 export function Logo({ className, tone = "dark" }: LogoProps) {
-  const src = tone === "dark" ? "/images/logo-referenz.png" : "/images/logo-white.png";
-  const width = tone === "dark" ? 700 : 1187;
-  const height = tone === "dark" ? 280 : 557;
+  const src = tone === "dark" ? "/images/vertico-logo.png" : "/images/vertico-logo-white.png";
+  const width = 3799;
+  const height = 1322;
 
   return (
     <Image
