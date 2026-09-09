@@ -13,33 +13,6 @@ export const metadata = buildMetadata({
   path: "/",
 });
 
-const LEISTUNGEN = [
-  {
-    title: "Rotorblattservice",
-    text: "Professionelle Inspektion und anspruchsvolle Reparaturen an Windenergieanlagen.",
-  },
-  {
-    title: "Technische Gutachten & Consulting",
-    text: "Gutachtenerstellung und unabhängige technische Beratung für Betreiber und Serviceunternehmen.",
-  },
-  {
-    title: "Höhenarbeiten",
-    text: "Sicherer Zugang an schwer erreichbaren Orten durch zertifizierte Seilzugangstechnik.",
-  },
-  {
-    title: "Baumpflege",
-    text: "Spezialbaumarbeiten und kontrollierte Fällungen.",
-  },
-  {
-    title: "Drohnenservice",
-    text: "Effiziente Sichtprüfungen und Dokumentationen aus der Luft.",
-  },
-  {
-    title: "Maschinenvermietung",
-    text: "Verleih von professionellen Spezialgeräten.",
-  },
-];
-
 export default function Home() {
   return (
     <>
@@ -104,45 +77,36 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16 grid gap-8 md:grid-cols-3">
-        <ServiceCard
-          href="/maschinenverleih"
-          title="Maschinenverleih"
-          description="Geprüfte, gewartete Maschinen zur kurz- und langfristigen Miete."
-          media={{ type: "icon", icon: <DryerIcon className="h-full w-full" /> }}
-        />
-        <ServiceCard
-          href="/baumfaellung-heckenschnitt"
-          title="Baumfällung & Heckenschnitt"
-          description="Spezialbaumarbeiten und kontrollierte Fällungen in Seilzugangstechnik oder mit dem Steiger."
-          media={{
-            type: "image",
-            src: "/images/baumfaellung-winter-1.jpg",
-            alt: "Zwei Baumkletterer in Seilzugangstechnik bei der Kronenpflege im Winter",
-          }}
-        />
-        <ServiceCard
-          href="/kletter-hoehenarbeiten"
-          title="Kletter- & Höhenarbeiten"
-          description="Sicherer Zugang an schwer erreichbaren Orten – inklusive Rotorblattservice an Windenergieanlagen."
-          media={{
-            type: "image",
-            src: "/images/windkraft-seilzugang-1.jpg",
-            alt: "Seilzugangstechniker bei der Wartung eines Rotorblatts an einer Windkraftanlage",
-          }}
-        />
-      </section>
-
       <section className="mx-auto max-w-6xl px-4 py-16">
         <h2 className="text-3xl mb-8">Das leisten wir für Sie</h2>
-        <dl className="grid gap-8 md:grid-cols-3">
-          {LEISTUNGEN.map((leistung) => (
-            <div key={leistung.title} className="border-l-2 border-primary pl-4">
-              <dt className="font-heading text-lg uppercase">{leistung.title}</dt>
-              <dd className="font-body text-sm text-ink mt-1">{leistung.text}</dd>
-            </div>
-          ))}
-        </dl>
+        <div className="grid gap-8 md:grid-cols-3">
+          <ServiceCard
+            href="/maschinenverleih"
+            title="Maschinenverleih"
+            description="Geprüfte, gewartete Maschinen zur kurz- und langfristigen Miete."
+            media={{ type: "icon", icon: <DryerIcon className="h-full w-full" /> }}
+          />
+          <ServiceCard
+            href="/baumfaellung-heckenschnitt"
+            title="Baumfällung & Heckenschnitt"
+            description="Spezialbaumarbeiten und kontrollierte Fällungen in Seilzugangstechnik oder mit dem Steiger."
+            media={{
+              type: "image",
+              src: "/images/baumfaellung-winter-1.jpg",
+              alt: "Zwei Baumkletterer in Seilzugangstechnik bei der Kronenpflege im Winter",
+            }}
+          />
+          <ServiceCard
+            href="/kletter-hoehenarbeiten"
+            title="Kletter- & Höhenarbeiten"
+            description="Seilzugang, Rotorblattservice, technische Gutachten & Consulting sowie Drohneninspektionen an schwer erreichbaren Anlagen."
+            media={{
+              type: "image",
+              src: "/images/windkraft-seilzugang-1.jpg",
+              alt: "Seilzugangstechniker bei der Wartung eines Rotorblatts an einer Windkraftanlage",
+            }}
+          />
+        </div>
       </section>
 
       <section className="bg-surface-alt">

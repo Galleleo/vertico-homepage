@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { buildMetadata } from "@/lib/metadata";
 import { CtaButton } from "@/components/CtaButton";
+import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
 export const metadata = buildMetadata({
   title: "Kletter- & Höhenarbeiten",
@@ -36,6 +37,16 @@ export default function KletterHoehenarbeitenPage() {
         <li>Arbeiten an schwer zugänglichen Bauwerken</li>
       </ul>
 
+      <div className="relative h-72 md:h-96 w-full mb-12">
+        <Image
+          src="/images/windkraft-seilzugang-1.jpg"
+          alt="Seilzugangstechniker bei der Wartung eines Rotorblatts an einer Windkraftanlage"
+          fill
+          sizes="(min-width: 768px) 1152px, 100vw"
+          className="object-cover rounded-[var(--radius-sharp)]"
+        />
+      </div>
+
       <h2 className="text-3xl mb-2">Industrieklettern & Seilzugangstechnik</h2>
       <p className="font-heading uppercase tracking-wide text-sm text-ink/70 mb-4">
         Flexibler Zugang zu schwer erreichbaren Arbeitsbereichen
@@ -63,6 +74,11 @@ export default function KletterHoehenarbeitenPage() {
         Ihr Ergebnis: Sie sparen erhebliche Rüstkosten, minimieren Ausfallzeiten und erhalten
         höchste Sicherheit bei allen Einsätzen.
       </p>
+
+      <ImagePlaceholder
+        label="Rotorblattservice für Windenergieanlagen"
+        recommended={["Einsatzfoto", "Detailaufnahme", "technische Aufnahme"]}
+      />
 
       <h2 className="text-3xl mb-2">Rotorblattservice für Windenergieanlagen</h2>
       <p className="font-heading uppercase tracking-wide text-sm text-ink/70 mb-4">
@@ -127,6 +143,11 @@ export default function KletterHoehenarbeitenPage() {
         kosteneffiziente, langlebige Reparatur mit maximaler Standsicherheit.
       </p>
 
+      <ImagePlaceholder
+        label="Blitzschäden an Rotorblättern"
+        recommended={["Einsatzfoto", "Detailaufnahme", "technische Aufnahme"]}
+      />
+
       <h3 className="text-xl mb-2">Blitzschäden an Rotorblättern</h3>
       <p className="font-body max-w-2xl mb-2">
         Durch die exponierte Lage und Bauhöhe von Windenergieanlagen sind Blitzschäden ein
@@ -163,6 +184,11 @@ export default function KletterHoehenarbeitenPage() {
         deren Instandhaltung – mit dem Ziel maximaler Transparenz, damit Maßnahmen nur dort
         umgesetzt werden, wo sie technisch erforderlich und wirtschaftlich sinnvoll sind.
       </p>
+
+      <ImagePlaceholder
+        label="Montage, Wartung & Reparatur"
+        recommended={["Einsatzfoto", "Detailaufnahme", "technische Aufnahme"]}
+      />
 
       <h2 className="text-3xl mb-2">Montage, Wartung & Reparatur</h2>
       <p className="font-heading uppercase tracking-wide text-sm text-ink/70 mb-4">

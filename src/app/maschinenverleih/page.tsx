@@ -1,6 +1,7 @@
 import { buildMetadata } from "@/lib/metadata";
 import { DryerIcon, CompressorIcon, PlateCompactorIcon } from "@/components/icons/MachineIcons";
 import { CtaButton } from "@/components/CtaButton";
+import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { COMPANY } from "@/lib/site-data";
 
 export const metadata = buildMetadata({
@@ -42,6 +43,11 @@ export default function MaschinenverleihPage() {
         Kauf teurer Geräte. Wir vermieten professionelle Kompaktmaschinen für Ihr Vorhaben
         rund um Haus, Hof und Baustelle.
       </p>
+
+      <ImagePlaceholder
+        label="Maschinenverleih in Hagen im Bremischen"
+        recommended={["Maschinenfoto", "Einsatzfoto", "Detailaufnahme"]}
+      />
 
       <h2 className="text-2xl mb-6">Unsere Geräte</h2>
       <ul className="grid gap-8 md:grid-cols-3 mb-12">
