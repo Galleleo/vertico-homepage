@@ -35,6 +35,26 @@ export default function BaumfaellungPage() {
         <li>Kronensicherung und Kronenpflege</li>
       </ul>
 
+      <h2 className="text-3xl mb-2">Spezialbaumfällung mit Seilzugangstechnik</h2>
+      <p className="font-heading uppercase tracking-wide text-sm text-ink/70 mb-4">
+        Kontrollierter Abtrag bei engsten Platz- und Zugangsverhältnissen
+      </p>
+      <p className="font-body max-w-2xl mb-6">
+        Steht ein Baum nah an Gebäuden, Leitungen oder schützenswerter Infrastruktur, ist eine
+        normale Fällung unmöglich. Mit moderner Seil- und Riggingtechnik tragen wir Bäume
+        stückweise millimetergenau ab – ganz ohne Beschädigung an Ihrem Eigentum.
+      </p>
+      <h3 className="text-lg mb-2">Unser technisches Vorgehen</h3>
+      <ul className="font-body list-disc list-inside mb-6 space-y-1">
+        <li>Gefahrenanalyse – exakte Planung von Lastwegen, Arbeits- und Fallbereichen</li>
+        <li>Spezialausrüstung – Einsatz zertifizierter Anschlag- und Riggingmittel</li>
+        <li>Sicherer Abtrag – kontrolliertes Abseilen von Stamm- und Kronenteilen Stück für Stück</li>
+      </ul>
+      <p className="font-body max-w-2xl mb-12">
+        Ihr Vorteil: maximale Sicherheit für umliegende Gebäude und Anlagen – selbst dort, wo
+        keine Schwerlastkräne oder Hebebühnen Platz finden.
+      </p>
+
       <CtaButton href="/kontakt">Baumarbeiten anfragen</CtaButton>
     </div>
   );

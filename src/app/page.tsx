@@ -13,6 +13,33 @@ export const metadata = buildMetadata({
   path: "/",
 });
 
+const LEISTUNGEN = [
+  {
+    title: "Rotorblattservice",
+    text: "Professionelle Inspektion und anspruchsvolle Reparaturen an Windenergieanlagen.",
+  },
+  {
+    title: "Technische Gutachten & Consulting",
+    text: "Gutachtenerstellung und unabhängige technische Beratung für Betreiber und Serviceunternehmen.",
+  },
+  {
+    title: "Höhenarbeiten",
+    text: "Sicherer Zugang an schwer erreichbaren Orten durch zertifizierte Seilzugangstechnik.",
+  },
+  {
+    title: "Baumpflege",
+    text: "Spezialbaumarbeiten und kontrollierte Fällungen.",
+  },
+  {
+    title: "Drohnenservice",
+    text: "Effiziente Sichtprüfungen und Dokumentationen aus der Luft.",
+  },
+  {
+    title: "Maschinenvermietung",
+    text: "Verleih von professionellen Spezialgeräten.",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -62,10 +89,13 @@ export default function Home() {
         />
         <div className="relative z-10 mx-auto max-w-6xl px-4 pb-16 text-on-dark">
           <h1 className="text-4xl md:text-6xl max-w-2xl">Alles, was hoch hinaus muss.</h1>
+          <p className="font-heading uppercase tracking-wide text-sm md:text-base mt-3 text-on-dark/80">
+            Spezialtechnik in der Höhe – sicher, präzise und verlässlich
+          </p>
           <p className="font-body mt-4 max-w-xl">
-            {COMPANY.name} ist ein Unternehmen aus {COMPANY.city} für Maschinenverleih,
-            Baumfällung, Heckenschnitt sowie Kletter- und Höhenarbeiten – inklusive Wartung
-            und Inspektion von Windkraftanlagen. Bei uns arbeiten ausschließlich zertifizierte
+            {COMPANY.name} ist Ihr Experte aus {COMPANY.city} für Windenergie,
+            Seilzugangstechnik, Spezialbaumarbeiten, Drohnenaufnahmen und
+            Spezialmaschinenverleih. Bei uns arbeiten ausschließlich zertifizierte
             Mitarbeiter und zertifizierte Seiltechniker.
           </p>
           <div className="mt-6">
@@ -84,7 +114,7 @@ export default function Home() {
         <ServiceCard
           href="/baumfaellung-heckenschnitt"
           title="Baumfällung & Heckenschnitt"
-          description="Fällung in Seilzugangstechnik oder mit dem Steiger, plus Grünpflege."
+          description="Spezialbaumarbeiten und kontrollierte Fällungen in Seilzugangstechnik oder mit dem Steiger."
           media={{
             type: "image",
             src: "/images/baumfaellung-winter-1.jpg",
@@ -94,7 +124,7 @@ export default function Home() {
         <ServiceCard
           href="/kletter-hoehenarbeiten"
           title="Kletter- & Höhenarbeiten"
-          description="Seilzugang an schwer zugänglichen Bauwerken, inklusive Windkraftanlagen."
+          description="Sicherer Zugang an schwer erreichbaren Orten – inklusive Rotorblattservice an Windenergieanlagen."
           media={{
             type: "image",
             src: "/images/windkraft-seilzugang-1.jpg",
@@ -103,14 +133,52 @@ export default function Home() {
         />
       </section>
 
+      <section className="mx-auto max-w-6xl px-4 py-16">
+        <h2 className="text-3xl mb-8">Das leisten wir für Sie</h2>
+        <dl className="grid gap-8 md:grid-cols-3">
+          {LEISTUNGEN.map((leistung) => (
+            <div key={leistung.title} className="border-l-2 border-primary pl-4">
+              <dt className="font-heading text-lg uppercase">{leistung.title}</dt>
+              <dd className="font-body text-sm text-ink mt-1">{leistung.text}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      <section className="bg-surface-alt">
+        <div className="mx-auto max-w-6xl px-4 py-16">
+          <h2 className="text-3xl mb-2">Unser technischer Ansatz</h2>
+          <p className="font-heading uppercase tracking-wide text-sm text-ink/70 mb-6">
+            Sicherheit und Effizienz aus einer Hand
+          </p>
+          <p className="font-body max-w-2xl mb-8">
+            Für uns ist die Zugangstechnik nur ein Baustein des Gesamterfolgs. Wir betrachten
+            jedes Projekt ganzheitlich und stimmen alle Arbeitsschritte perfekt aufeinander ab –
+            aus dem optimalen Zusammenspiel von:
+          </p>
+          <ol className="font-body list-decimal list-inside max-w-2xl mb-8 space-y-1">
+            <li>Technische Aufgabenstellung – präzise Analyse Ihres Bedarfs</li>
+            <li>Zugangskonzept und Gefährdungsbeurteilung – maximale Sicherheit für Mensch und Anlage</li>
+            <li>Arbeitsverfahren und Ausrüstung – Einsatz modernster Spezialtechnik</li>
+            <li>Fachgerechte Ausführung – professionelle Umsetzung durch zertifizierte Expertise</li>
+          </ol>
+          <p className="font-body max-w-2xl">
+            Ihr Nutzen: Sie erhalten technisch durchdachte Lösungen, die Ausfallzeiten
+            minimieren, die Sicherheit maximieren und Ihre Kosten nachhaltig senken.
+          </p>
+        </div>
+      </section>
+
       <WhyVertico />
 
       <section className="bg-surface-alt">
         <div className="mx-auto max-w-6xl px-4 py-16 flex flex-col items-start gap-4">
-          <h2 className="text-3xl">Kontakt</h2>
+          <h2 className="text-3xl">Ihr Projekt ist anspruchsvoll? Wir haben die passende Lösung.</h2>
           <p className="font-body max-w-xl">
-            Sie haben einen Baum, ein Gerät oder eine Anlage, die hoch hinaus muss? Schreiben
-            Sie uns – wir melden uns kurzfristig zurück.
+            Ob Spezialarbeiten in der Höhe, Inspektionen aus der Luft oder das passende
+            Mietgerät für Ihr Bauvorhaben: Wir entwickeln maßgeschneiderte Konzepte und
+            unterstützen Sie fachgerecht bei der Umsetzung mit der passenden Spezialtechnik.
+            Sprechen Sie uns einfach an – wir beraten Sie gerne persönlich und unverbindlich.
           </p>
           <CtaButton href="/kontakt">Zum Kontaktformular</CtaButton>
         </div>
