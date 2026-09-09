@@ -166,7 +166,7 @@ export default function KletterHoehenarbeitenPage() {
         Kosten und sichern die langfristige Standsicherheit Ihrer Anlage.
       </p>
 
-      <h3 className="text-xl mb-2">Technische Gutachten & Consulting</h3>
+      <h3 id="gutachten-consulting" className="text-xl mb-2">Technische Gutachten & Consulting</h3>
       <p className="font-body max-w-2xl mb-2">
         Fundierte Entscheidungen in Betrieb und Instandhaltung erfordern verlässliche Fakten.
         Unsere Sachverständigen unterstützen Sie mit präzisen Analysen, objektiven Gutachten

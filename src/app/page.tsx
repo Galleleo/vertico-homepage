@@ -3,6 +3,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { WhyVertico } from "@/components/WhyVertico";
 import { CtaButton } from "@/components/CtaButton";
 import { DryerIcon } from "@/components/icons/MachineIcons";
+import { DocumentCheckIcon, DroneIcon } from "@/components/icons/ServiceIcons";
 import { buildMetadata } from "@/lib/metadata";
 import { COMPANY } from "@/lib/site-data";
 
@@ -99,12 +100,24 @@ export default function Home() {
           <ServiceCard
             href="/kletter-hoehenarbeiten"
             title="Kletter- & Höhenarbeiten"
-            description="Seilzugang, Rotorblattservice, technische Gutachten & Consulting sowie Drohneninspektionen an schwer erreichbaren Anlagen."
+            description="Sicherer Zugang an schwer erreichbaren Orten – inklusive Rotorblattservice an Windenergieanlagen."
             media={{
               type: "image",
               src: "/images/windkraft-seilzugang-1.jpg",
               alt: "Seilzugangstechniker bei der Wartung eines Rotorblatts an einer Windkraftanlage",
             }}
+          />
+          <ServiceCard
+            href="/kletter-hoehenarbeiten#gutachten-consulting"
+            title="Technische Gutachten & Consulting"
+            description="Gutachtenerstellung und unabhängige technische Beratung für Betreiber und Serviceunternehmen."
+            media={{ type: "icon", icon: <DocumentCheckIcon className="h-full w-full" /> }}
+          />
+          <ServiceCard
+            href="/kontakt"
+            title="Drohnenservice"
+            description="Effiziente Sichtprüfungen und Dokumentationen aus der Luft."
+            media={{ type: "icon", icon: <DroneIcon className="h-full w-full" /> }}
           />
         </div>
       </section>
