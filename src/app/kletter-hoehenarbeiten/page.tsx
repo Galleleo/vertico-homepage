@@ -13,25 +13,15 @@ export const metadata = buildMetadata({
 export default function KletterHoehenarbeitenPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-16">
-      <h1 className="text-4xl md:text-5xl mb-6">Kletter- & Höhenarbeiten</h1>
-      <p className="font-body max-w-2xl mb-8">
-        Sicherer Zugang an schwer erreichbaren Orten durch zertifizierte Seilzugangstechnik.
+      <h1 className="text-4xl md:text-5xl mb-2">Kletter- & Höhenarbeiten</h1>
+      <p className="font-heading uppercase tracking-wide text-sm text-ink/70 mb-8">
+        Sicherer Zugang an schwer erreichbaren Orten durch zertifizierte Seilzugangstechnik
       </p>
 
       <div className="relative h-72 md:h-96 w-full mb-12">
         <Image
           src="/images/windkraft-seilzugang-2.jpg"
           alt="Vollständige Windkraftanlage mit Turm und Rotorblatt vor klarem blauem Himmel, ein Seilzugangstechniker seilt sich nahe der Rotorblattspitze ab"
-          fill
-          sizes="(min-width: 768px) 1152px, 100vw"
-          className="object-cover rounded-[var(--radius-sharp)]"
-        />
-      </div>
-
-      <div className="relative h-72 md:h-96 w-full mb-12">
-        <Image
-          src="/images/windkraft-seilzugang-1.jpg"
-          alt="Seilzugangstechniker bei der Wartung eines Rotorblatts an einer Windkraftanlage"
           fill
           sizes="(min-width: 768px) 1152px, 100vw"
           className="object-cover rounded-[var(--radius-sharp)]"
@@ -66,10 +56,15 @@ export default function KletterHoehenarbeitenPage() {
         höchste Sicherheit bei allen Einsätzen.
       </p>
 
-      <ImagePlaceholder
-        label="Rotorblattservice für Windenergieanlagen"
-        recommended={["Einsatzfoto", "Detailaufnahme", "technische Aufnahme"]}
-      />
+      <div className="relative h-72 md:h-96 w-full mb-12">
+        <Image
+          src="/images/windkraft-seilzugang-1.jpg"
+          alt="Seilzugangstechniker bei der Wartung eines Rotorblatts an einer Windkraftanlage"
+          fill
+          sizes="(min-width: 768px) 1152px, 100vw"
+          className="object-cover rounded-[var(--radius-sharp)]"
+        />
+      </div>
 
       <h2 className="text-3xl mb-2">Rotorblattservice für Windenergieanlagen</h2>
       <p className="font-heading uppercase tracking-wide text-sm text-ink/70 mb-4">
