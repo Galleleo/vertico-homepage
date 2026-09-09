@@ -32,11 +32,9 @@ const MACHINES = [
 export default function MaschinenverleihPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-16">
-      <h1 className="text-4xl md:text-5xl mb-6">Maschinenverleih</h1>
-      <p className="font-body max-w-2xl mb-4">
-        Wir vermieten geprüfte und regelmäßig gewartete Maschinen – kurzfristig für den
-        einzelnen Einsatz oder langfristig für längere Bauvorhaben. Persönliche Beratung
-        gehört immer dazu.
+      <h1 className="text-4xl md:text-5xl mb-2">Maschinenverleih</h1>
+      <p className="font-heading uppercase tracking-wide text-sm text-ink/70 mb-4">
+        Kompakte Technik für Bau, Garten und Grundstück
       </p>
       <p className="font-body max-w-2xl mb-12">
         Mieten statt kaufen – flexibel und wirtschaftlich: Nicht jedes Projekt erfordert den
@@ -72,12 +70,10 @@ export default function MaschinenverleihPage() {
         {COMPANY.city} anfragen.
       </p>
 
-      <h2 className="text-2xl mb-4">Warum bei uns mieten?</h2>
-      <ul className="font-body list-disc list-inside mb-4 space-y-1">
-        <li>Geprüft & gewartet</li>
-        <li>Kurz- und langfristige Miete</li>
-        <li>Persönliche Beratung</li>
-      </ul>
+      <h2 className="text-2xl mb-4">Ihr Vorteil</h2>
+      <p className="font-body max-w-2xl mb-4">
+        Unkomplizierte Anmietung, moderne Geräte und persönliche Beratung.
+      </p>
       <p className="font-body text-sm text-ink mb-12">
         Bitte beachten Sie: Wir erheben 100 € Kaution in bar sowie die Vorlage eines gültigen
         Personalausweises.

@@ -15,9 +15,7 @@ export default function KletterHoehenarbeitenPage() {
     <div className="mx-auto max-w-6xl px-4 py-16">
       <h1 className="text-4xl md:text-5xl mb-6">Kletter- & Höhenarbeiten</h1>
       <p className="font-body max-w-2xl mb-8">
-        Für Bauwerke, die schwer zugänglich sind, arbeiten wir in Seilzugangstechnik –
-        flexibel, sicher und ohne schweres Gerät vor Ort. Unsere Seiltechniker sind
-        ausgebildet und zertifiziert.
+        Sicherer Zugang an schwer erreichbaren Orten durch zertifizierte Seilzugangstechnik.
       </p>
 
       <div className="relative h-72 md:h-96 w-full mb-12">
@@ -29,13 +27,6 @@ export default function KletterHoehenarbeitenPage() {
           className="object-cover rounded-[var(--radius-sharp)]"
         />
       </div>
-
-      <ul className="font-body list-disc list-inside mb-12 space-y-1">
-        <li>Allgemeine Kletter- und Höhenarbeiten in Seilzugangstechnik</li>
-        <li>Wartung und Inspektion von Windkraftanlagen (Seilzugang an Rotorblatt und Turm)</li>
-        <li>Rotorblatt-Reparatur</li>
-        <li>Arbeiten an schwer zugänglichen Bauwerken</li>
-      </ul>
 
       <div className="relative h-72 md:h-96 w-full mb-12">
         <Image

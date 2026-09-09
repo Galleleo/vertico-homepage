@@ -5,7 +5,6 @@ import { CtaButton } from "@/components/CtaButton";
 import { DryerIcon } from "@/components/icons/MachineIcons";
 import { DocumentCheckIcon, DroneIcon } from "@/components/icons/ServiceIcons";
 import { buildMetadata } from "@/lib/metadata";
-import { COMPANY } from "@/lib/site-data";
 
 export const metadata = buildMetadata({
   title: "Startseite",
@@ -62,16 +61,18 @@ export default function Home() {
           className="animate-float-drone absolute left-[63%] top-[28%] z-[5] hidden h-10 w-auto drop-shadow-md sm:block md:h-14"
         />
         <div className="relative z-10 mx-auto max-w-6xl px-4 pb-16 text-on-dark">
-          <h1 className="text-4xl md:text-6xl max-w-2xl">Alles, was hoch hinaus muss.</h1>
-          <p className="font-heading uppercase tracking-wide text-sm md:text-base mt-3 text-on-dark/80">
+          <h1 className="text-4xl md:text-6xl max-w-2xl">
             Spezialtechnik in der Höhe – sicher, präzise und verlässlich
+          </h1>
+          <p className="font-heading uppercase tracking-wide text-sm md:text-base mt-4 text-on-dark/80">
+            Ihr Experte für
           </p>
-          <p className="font-body mt-4 max-w-xl">
-            {COMPANY.name} ist Ihr Experte aus {COMPANY.city} für Windenergie,
-            Seilzugangstechnik, Spezialbaumarbeiten, Drohnenaufnahmen und
-            Spezialmaschinenverleih. Bei uns arbeiten ausschließlich zertifizierte
-            Mitarbeiter und zertifizierte Seiltechniker.
-          </p>
+          <ul className="font-body mt-2 max-w-xl space-y-1">
+            <li>Windenergie</li>
+            <li>Seilzugangstechnik</li>
+            <li>Spezialbaumarbeiten</li>
+            <li>Drohnenaufnahmen und Spezialmaschinenverleih</li>
+          </ul>
           <div className="mt-6">
             <CtaButton href="/kontakt">Kontakt aufnehmen</CtaButton>
           </div>
@@ -79,12 +80,21 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="text-3xl mb-8">Das leisten wir für Sie</h2>
+        <h2 className="text-3xl mb-2">Sicher in der Höhe, stark im Ergebnis</h2>
+        <p className="font-body max-w-2xl mb-8">
+          Manche Projekte erfordern mehr als nur Standardlösungen. Wir haben uns auf
+          technische Arbeiten dort spezialisiert, wo gewöhnlich Zugänge an ihre Grenzen
+          stoßen. Mit Erfahrung, Expertise, professioneller Seilzugangstechnik und
+          Spezialgeräten sorgen wir für reibungslosen Ablauf.
+        </p>
+        <h3 className="font-heading uppercase tracking-wide text-sm text-ink/70 mb-6">
+          Das leisten wir für Sie
+        </h3>
         <div className="grid gap-8 md:grid-cols-3">
           <ServiceCard
             href="/maschinenverleih"
             title="Maschinenverleih"
-            description="Geprüfte, gewartete Maschinen zur kurz- und langfristigen Miete."
+            description="Verleih von professionellen Spezialgeräten."
             media={{ type: "icon", icon: <DryerIcon className="h-full w-full" /> }}
           />
           <ServiceCard
@@ -151,10 +161,33 @@ export default function Home() {
       <section className="bg-surface-alt">
         <div className="mx-auto max-w-6xl px-4 py-16 flex flex-col items-start gap-4">
           <h2 className="text-3xl">Ihr Projekt ist anspruchsvoll? Wir haben die passende Lösung.</h2>
-          <p className="font-body max-w-xl">
+          <p className="font-body max-w-2xl">
             Ob Spezialarbeiten in der Höhe, Inspektionen aus der Luft oder das passende
             Mietgerät für Ihr Bauvorhaben: Wir entwickeln maßgeschneiderte Konzepte und
             unterstützen Sie fachgerecht bei der Umsetzung mit der passenden Spezialtechnik.
+          </p>
+          <dl className="grid gap-6 sm:grid-cols-3 max-w-3xl mb-2">
+            <div>
+              <dt className="font-heading text-sm uppercase">Spezialarbeit in der Höhe</dt>
+              <dd className="font-body text-sm text-ink mt-1">
+                Windenergie (Inspektion und Reparatur von Rotorblättern), Spezialbaumarbeiten
+                (Fällung und Pflege), Industrieklettern (Montage/Demontage, Reinigung)
+              </dd>
+            </div>
+            <div>
+              <dt className="font-heading text-sm uppercase">Inspektionen aus der Luft</dt>
+              <dd className="font-body text-sm text-ink mt-1">
+                Hochauflösende Drohnenaufnahmen und Inspektionen
+              </dd>
+            </div>
+            <div>
+              <dt className="font-heading text-sm uppercase">Mietgeräte</dt>
+              <dd className="font-body text-sm text-ink mt-1">
+                Vermietung von Spezialtechnik und Baumaschinen
+              </dd>
+            </div>
+          </dl>
+          <p className="font-body max-w-xl">
             Sprechen Sie uns einfach an – wir beraten Sie gerne persönlich und unverbindlich.
           </p>
           <CtaButton href="/kontakt">Zum Kontaktformular</CtaButton>
