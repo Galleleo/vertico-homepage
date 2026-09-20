@@ -43,6 +43,16 @@ export default function ImpressumPage() {
         {COMPANY.street}, {COMPANY.zip} {COMPANY.city}
       </p>
 
+      <h2 className="text-2xl mt-8 mb-3">Dienstleistungsinformationen gemäß DL-InfoV</h2>
+      <p>
+        Angaben zu unserem Berufshaftpflichtversicherer sowie zum geografischen
+        Geltungsbereich des Versicherungsschutzes finden Sie auf der Serviceseite unseres
+        Versicherers.{" "}
+        {/* TODO: Link/Formulierung mit Swantje und dem Versicherungsbüro final abstimmen, sobald verfügbar */}
+        Den entsprechenden Link ergänzen wir, sobald er mit unserem Versicherungsbüro final
+        abgestimmt ist.
+      </p>
+
       <h2 className="text-2xl mt-8 mb-3">EU-Streitschlichtung</h2>
       <p>
         Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS)

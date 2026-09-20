@@ -4,7 +4,8 @@ import { ContactForm } from "./ContactForm";
 
 export const metadata = buildMetadata({
   title: "Kontakt",
-  description: "Kontaktieren Sie Vertico – Bremische Spezialtechnik für Maschinenverleih, Baumarbeiten und Höhenarbeiten.",
+  description:
+    "Kontaktieren Sie VERTICO Spezialtechnik für Windenergie & Rotorblattservice, Baumfällung & Spezialfällung sowie Maschinen- & Gerätevermietung.",
   path: "/kontakt",
 });
 

@@ -4,10 +4,13 @@ import { Footer } from "@/components/Footer";
 import { COMPANY } from "@/lib/site-data";
 import "./globals.css";
 
+const SITE_URL = "https://vertico-spezialtechnik.de";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vertico-spezialtechnik.de"),
+  metadataBase: new URL(SITE_URL),
   title: COMPANY.name,
-  description: "Maschinenverleih, Baumfällung und Kletter- bzw. Höhenarbeiten aus Hagen im Bremischen.",
+  description:
+    "Windenergie & Rotorblattservice, Baumfällung & Spezialfällung sowie Maschinen- & Gerätevermietung aus Hagen im Bremischen.",
   openGraph: {
     type: "website",
     locale: "de_DE",
@@ -15,12 +18,33 @@ export const metadata: Metadata = {
   },
 };
 
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  name: COMPANY.name,
+  url: SITE_URL,
+  telephone: COMPANY.phone,
+  email: COMPANY.email,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: COMPANY.street,
+    postalCode: COMPANY.zip,
+    addressLocality: COMPANY.city,
+    addressCountry: "DE",
+  },
+  areaServed: "DE",
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de">
       <body suppressHydrationWarning>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        />
         <Header />
-        <main className="pt-16">{children}</main>
+        <main className="pt-20 lg:pt-16">{children}</main>
         <Footer />
       </body>
     </html>
