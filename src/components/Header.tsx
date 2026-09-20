@@ -29,11 +29,11 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-surface border-b border-border">
-      <div className="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between">
-        <nav aria-label="Hauptnavigation" className="hidden md:flex gap-6">
+      <div className="mx-auto max-w-6xl px-4 h-20 lg:h-16 flex items-center justify-between">
+        <nav aria-label="Hauptnavigation" className="hidden lg:flex gap-4 xl:gap-6">
           <Link
             href="/"
-            className="font-body text-sm text-ink hover:text-primary border-b border-transparent hover:border-primary transition-colors"
+            className="font-body text-sm text-ink hover:text-primary border-b border-transparent hover:border-primary transition-colors whitespace-nowrap"
           >
             Start
           </Link>
@@ -41,7 +41,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="font-body text-sm text-ink hover:text-primary border-b border-transparent hover:border-primary transition-colors"
+              className="font-body text-sm text-ink hover:text-primary border-b border-transparent hover:border-primary transition-colors whitespace-nowrap"
             >
               {item.label}
             </Link>
@@ -54,7 +54,7 @@ export function Header() {
           aria-label="Zur Startseite"
           onClick={() => setOpen(false)}
         >
-          <Logo className="h-10 w-auto" tone="dark" />
+          <Logo className="h-14 w-auto lg:h-10" tone="dark" />
         </Link>
 
         <button
@@ -63,7 +63,7 @@ export function Header() {
           aria-controls="mobile-nav"
           aria-label={open ? "Menü schließen" : "Menü öffnen"}
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden flex flex-col justify-center gap-1.5 h-10 w-10"
+          className="lg:hidden flex flex-col justify-center gap-1.5 h-10 w-10"
         >
           <span className="block h-0.5 w-6 bg-ink" />
           <span className="block h-0.5 w-6 bg-ink" />
@@ -75,7 +75,7 @@ export function Header() {
         <nav
           id="mobile-nav"
           aria-label="Mobile Navigation"
-          className="md:hidden fixed inset-0 top-16 bg-surface flex flex-col items-center gap-6 pt-12"
+          className="lg:hidden fixed inset-0 top-20 bg-surface flex flex-col items-center gap-6 pt-12 overflow-y-auto"
         >
           <Link href="/" onClick={() => setOpen(false)} className="font-heading text-2xl text-ink">
             Start
@@ -85,7 +85,7 @@ export function Header() {
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="font-heading text-2xl text-ink"
+              className="font-heading text-2xl text-ink text-center"
             >
               {item.label}
             </Link>

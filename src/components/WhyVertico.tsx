@@ -1,27 +1,23 @@
 const REASONS = [
   {
-    title: "Nur zertifizierte Mitarbeiter",
-    text: "Ausgebildete, zertifizierte Seiltechniker führen jede Kletter- und Höhenarbeit durch.",
+    title: "Zertifizierte Befahr- & Seilzugangstechnik",
+    text: "Qualifizierte Fachkräfte und spezialisierte Zugangssysteme für sichere und effiziente Einsätze.",
   },
   {
-    title: "Sicherheit zuerst",
-    text: "Fällungen aus Seilzugangstechnik oder mit dem Steiger – nicht „wild“ gefällt.",
+    title: "Fundierte Rotorblattkompetenz",
+    text: "Langjährige Fachkenntnisse in Inspektion, Bewertung und Instandsetzung von Rotorblättern.",
   },
   {
-    title: "Geprüfte Maschinen",
-    text: "Regelmäßig gewartete Technik, sowohl zur Vermietung als auch im eigenen Einsatz.",
-  },
-  {
-    title: "Junges Unternehmen aus Hagen im Bremischen",
-    text: "Kurze Wege, persönlicher Kontakt, direkte Absprachen.",
+    title: "Individuelle & wirtschaftliche Lösungen",
+    text: "Bedarfsgerechte Konzepte mit konsequentem Blick auf Qualität, technische Erfordernisse und Wirtschaftlichkeit.",
   },
 ];
 
 export function WhyVertico() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-16">
-      <h2 className="text-3xl mb-8">Warum Vertico?</h2>
-      <dl className="grid gap-8 md:grid-cols-2">
+      <h2 className="text-3xl mb-8">Warum VERTICO?</h2>
+      <dl className="grid gap-8 md:grid-cols-3">
         {REASONS.map((reason) => (
           <div key={reason.title} className="border-l-2 border-primary pl-4">
             <dt className="font-heading text-lg uppercase">{reason.title}</dt>

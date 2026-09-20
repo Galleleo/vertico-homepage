@@ -6,9 +6,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://vertico-spezialtechnik.de";
   const routes = [
     "",
-    "/maschinenverleih",
-    "/baumfaellung-heckenschnitt",
-    "/kletter-hoehenarbeiten",
+    "/windenergie-rotorblattservice",
+    "/windenergie-rotorblattservice/rotorblattinspektionen",
+    "/windenergie-rotorblattservice/rotorblattinstandsetzung",
+    "/windenergie-rotorblattservice/technische-gutachten-consulting",
+    "/windenergie-rotorblattservice/zugangstechnik-verfahrensmethoden",
+    "/baumfaellung-spezialfaellung",
+    "/maschinen-geraetevermietung",
+    "/ueber-vertico",
     "/kontakt",
     "/datenschutz",
     "/impressum",
