@@ -39,8 +39,8 @@ export default function RotorblattinspektionenPage() {
 
       <div className="relative h-72 md:h-96 w-full mb-12">
         <Image
-          src="/images/windkraft-seilzugang-2.jpg"
-          alt="Vollständige Windkraftanlage mit Turm und Rotorblatt vor klarem blauem Himmel, ein Seilzugangstechniker seilt sich nahe der Rotorblattspitze ab"
+          src="/images/windkraft-seilzugang-1.jpg"
+          alt="Seilzugangstechniker bei der Wartung eines Rotorblatts an einer Windkraftanlage"
           fill
           sizes="(min-width: 768px) 1152px, 100vw"
           className="object-cover rounded-[var(--radius-sharp)]"
