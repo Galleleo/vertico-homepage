@@ -67,6 +67,16 @@ export default function BaumfaellungSpezialfaellungPage() {
         />
       </div>
 
+      <div className="relative h-72 md:h-96 w-full mb-12">
+        <Image
+          src="/images/baumfaellung-kevin-4.jpg"
+          alt="Baumkletterer in Seilzugangstechnik klettert hoch oben im Baum am Stamm empor"
+          fill
+          sizes="(min-width: 768px) 1152px, 100vw"
+          className="object-cover rounded-[var(--radius-sharp)]"
+        />
+      </div>
+
       <h2 className="text-2xl mb-2">Individuell geplant. Sicher umgesetzt.</h2>
       <p className="font-body max-w-2xl mb-12">
         Die geeignete Vorgehensweise richtet sich nach Baum, Standort und örtlichen
