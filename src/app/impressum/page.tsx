@@ -47,10 +47,15 @@ export default function ImpressumPage() {
       <p>
         Angaben zu unserem Berufshaftpflichtversicherer sowie zum geografischen
         Geltungsbereich des Versicherungsschutzes finden Sie auf der Serviceseite unseres
-        Versicherers.{" "}
-        {/* TODO: Link/Formulierung mit Swantje und dem Versicherungsbüro final abstimmen, sobald verfügbar */}
-        Den entsprechenden Link ergänzen wir, sobald er mit unserem Versicherungsbüro final
-        abgestimmt ist.
+        Versicherers:{" "}
+        <a
+          href="http://www.hhbock.de/dienstleistungsinformation"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline"
+        >
+          www.hhbock.de/dienstleistungsinformation
+        </a>
       </p>
 
       <h2 className="text-2xl mt-8 mb-3">EU-Streitschlichtung</h2>
