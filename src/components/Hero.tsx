@@ -21,7 +21,7 @@ export function Hero() {
 
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[radial-gradient(ellipse_110%_85%_at_0%_100%,rgba(26,37,47,0.85)_0%,rgba(26,37,47,0.5)_35%,rgba(26,37,47,0)_65%)] mobile-landscape:bg-[radial-gradient(ellipse_200%_200%_at_0%_100%,rgba(26,37,47,0.88)_0%,rgba(26,37,47,0.62)_45%,rgba(26,37,47,0)_80%)]"
+        className="absolute inset-0 bg-[linear-gradient(90deg,rgba(120,128,135,0.4)_0%,rgba(120,128,135,0.2)_40%,rgba(120,128,135,0)_75%)]"
       />
 
       <div className="relative z-10 w-full mx-auto max-w-6xl px-4 pb-16 mobile-landscape:pb-4 text-on-dark [text-shadow:0_1px_2px_rgba(0,0,0,0.9),0_0_6px_rgba(0,0,0,0.85),0_0_18px_rgba(0,0,0,0.75),0_4px_10px_rgba(0,0,0,0.6)]">
