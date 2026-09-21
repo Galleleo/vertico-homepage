@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { buildMetadata } from "@/lib/metadata";
 import { CtaButton } from "@/components/CtaButton";
 import {
@@ -17,10 +18,22 @@ export const metadata = buildMetadata({
 });
 
 const CATEGORIES = [
-  { Icon: DryerIcon, name: "Bautrockner / Trocknungstechnik" },
+  {
+    Icon: DryerIcon,
+    name: "Bautrockner / Trocknungstechnik",
+    exampleImage: "/images/mietpark-bautrockner-beispiel.png",
+  },
   { Icon: ChipperIcon, name: "Häcksler" },
-  { Icon: TrailerIcon, name: "Anhänger" },
-  { Icon: ScaffoldIcon, name: "Fassadengerüst bis ca. 100 m²" },
+  {
+    Icon: TrailerIcon,
+    name: "Anhänger",
+    exampleImage: "/images/mietpark-anhaenger-beispiel.png",
+  },
+  {
+    Icon: ScaffoldIcon,
+    name: "Fassadengerüst bis ca. 100 m²",
+    exampleImage: "/images/mietpark-fassadengeruest-beispiel.png",
+  },
   { Icon: CompressorIcon, name: "Kompressoren" },
   { Icon: PlateCompactorIcon, name: "Rüttelplatten / Verdichtungstechnik" },
 ];
@@ -45,10 +58,24 @@ export default function MaschinenGeraetevermietungPage() {
 
       <h2 className="text-2xl mb-6">Mietangebot</h2>
       <ul className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 mb-4">
-        {CATEGORIES.map(({ Icon, name }) => (
-          <li key={name} className="border border-border rounded-[var(--radius-sharp)] p-5 flex items-center gap-3">
-            <Icon className="h-9 w-9 text-primary shrink-0" />
-            <span className="font-body text-sm">{name}</span>
+        {CATEGORIES.map(({ Icon, name, exampleImage }) => (
+          <li key={name} className="border border-border rounded-[var(--radius-sharp)] p-5">
+            {exampleImage ? (
+              <div className="flex items-center gap-3">
+                <div className="relative h-14 w-14 shrink-0 rounded-[var(--radius-sharp)] overflow-hidden bg-surface-alt">
+                  <Image src={exampleImage} alt="" fill sizes="56px" className="object-contain" />
+                </div>
+                <div>
+                  <span className="font-body text-sm">{name}</span>
+                  <p className="font-body text-xs text-ink/50">Beispielabbildung</p>
+                </div>
+              </div>
+            ) : (
+              <div className="flex items-center gap-3">
+                <Icon className="h-9 w-9 text-primary shrink-0" />
+                <span className="font-body text-sm">{name}</span>
+              </div>
+            )}
           </li>
         ))}
       </ul>

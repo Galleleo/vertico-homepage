@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { buildMetadata } from "@/lib/metadata";
 import { CtaButton } from "@/components/CtaButton";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { DroneIcon } from "@/components/icons/ServiceIcons";
 
 export const metadata = buildMetadata({
@@ -43,10 +42,15 @@ export default function ZugangstechnikVerfahrensmethodenPage() {
         </div>
 
         <div>
-          <ImagePlaceholder
-            label="Rotorblattbefahranlage"
-            recommended={["Originalfoto Rotorblattbefahranlage"]}
-          />
+          <div className="relative h-64 w-full mb-4">
+            <Image
+              src="/images/windenergie-befahranlage-detail.jpg"
+              alt="Rotorblattbefahranlage an einer Windenergieanlage im Einsatz"
+              fill
+              sizes="(min-width: 768px) 560px, 100vw"
+              className="object-cover rounded-[var(--radius-sharp)]"
+            />
+          </div>
           <h2 className="text-xl mb-2">Rotorblattbefahranlagen</h2>
           <p className="font-body">
             Anlagenspezifische Befahrtechnik für unterschiedliche Windenergieanlagentypen –
