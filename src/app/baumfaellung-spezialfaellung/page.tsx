@@ -41,7 +41,7 @@ export default function BaumfaellungSpezialfaellungPage() {
           alt="Baumkletterer in Seilzugangstechnik arbeitet hoch oben in der Krone eines Baums"
           fill
           sizes="(min-width: 768px) 1152px, 100vw"
-          className="object-cover rounded-[var(--radius-sharp)]"
+          className="object-cover object-[center_30%] rounded-[var(--radius-sharp)]"
         />
       </div>
 
@@ -63,7 +63,7 @@ export default function BaumfaellungSpezialfaellungPage() {
           alt="Baumkletterer in Seilzugangstechnik sichert sich am Stamm hoch oben im Baum"
           fill
           sizes="(min-width: 768px) 1152px, 100vw"
-          className="object-cover rounded-[var(--radius-sharp)]"
+          className="object-cover object-[center_22%] rounded-[var(--radius-sharp)]"
         />
       </div>
 
@@ -73,7 +73,7 @@ export default function BaumfaellungSpezialfaellungPage() {
           alt="Baumkletterer in Seilzugangstechnik klettert hoch oben im Baum am Stamm empor"
           fill
           sizes="(min-width: 768px) 1152px, 100vw"
-          className="object-cover rounded-[var(--radius-sharp)]"
+          className="object-cover object-[center_45%] rounded-[var(--radius-sharp)]"
         />
       </div>
 
