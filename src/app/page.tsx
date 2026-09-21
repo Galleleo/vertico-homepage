@@ -60,8 +60,8 @@ export default function Home() {
             description="Kontrollierte Baumfällungen und seilunterstützte Fällarbeiten – auch unter anspruchsvollen Bedingungen."
             media={{
               type: "image",
-              src: "/images/baumfaellung-winter-1.jpg",
-              alt: "Zwei Baumkletterer in Seilzugangstechnik bei der Kronenpflege im Winter",
+              src: "/images/baumfaellung-kevin-1.jpg",
+              alt: "Baumkletterer in Seilzugangstechnik lächelt bei der Arbeit hoch oben in einem Baum",
             }}
           />
           <div className="mt-4">

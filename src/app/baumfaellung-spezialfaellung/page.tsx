@@ -37,11 +37,11 @@ export default function BaumfaellungSpezialfaellungPage() {
 
       <div className="relative h-72 md:h-96 w-full mb-12">
         <Image
-          src="/images/baumfaellung-winter-2.jpg"
-          alt="Baumkletterer in Seilzugangstechnik arbeitet hoch oben an der Krone einer hohen Fichte, darunter ein Mitarbeiter am Boden, mehrere Wohnhäuser im Hintergrund, kahle Winterbäume"
+          src="/images/baumfaellung-kevin-2.jpg"
+          alt="Baumkletterer in Seilzugangstechnik arbeitet hoch oben in der Krone eines Baums"
           fill
           sizes="(min-width: 768px) 1152px, 100vw"
-          className="object-cover object-[50%_15%] rounded-[var(--radius-sharp)]"
+          className="object-cover rounded-[var(--radius-sharp)]"
         />
       </div>
 
@@ -59,8 +59,8 @@ export default function BaumfaellungSpezialfaellungPage() {
 
       <div className="relative h-72 md:h-96 w-full mb-12">
         <Image
-          src="/images/baumfaellung-winter-1.jpg"
-          alt="Zwei Baumkletterer in Seilzugangstechnik bei der Kronenpflege im Winter"
+          src="/images/baumfaellung-kevin-3.jpg"
+          alt="Baumkletterer in Seilzugangstechnik sichert sich am Stamm hoch oben im Baum"
           fill
           sizes="(min-width: 768px) 1152px, 100vw"
           className="object-cover rounded-[var(--radius-sharp)]"
