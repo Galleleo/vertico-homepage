@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { buildMetadata } from "@/lib/metadata";
 import { CtaButton } from "@/components/CtaButton";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
 export const metadata = buildMetadata({
   title: "Rotorblattinstandsetzung",
@@ -37,10 +37,15 @@ export default function RotorblattinstandsetzungPage() {
     <div className="mx-auto max-w-6xl px-4 py-16">
       <h1 className="text-4xl md:text-5xl mb-8">Rotorblattinstandsetzung</h1>
 
-      <ImagePlaceholder
-        label="Rotorblattinstandsetzung"
-        recommended={["Reparaturfoto", "Detailaufnahme LEP", "Einsatzfoto"]}
-      />
+      <div className="relative h-72 md:h-96 w-full mb-12">
+        <Image
+          src="/images/windenergie-blattwurzel-erosion.jpg"
+          alt="Detailaufnahme der Blattwurzel eines Rotorblatts mit sichtbaren Erosionsspuren"
+          fill
+          sizes="(min-width: 768px) 1152px, 100vw"
+          className="object-cover rounded-[var(--radius-sharp)]"
+        />
+      </div>
 
       <div className="grid gap-8 md:grid-cols-2">
         {REPAIRS.map((item) => (

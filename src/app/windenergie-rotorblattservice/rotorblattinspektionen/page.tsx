@@ -37,14 +37,25 @@ export default function RotorblattinspektionenPage() {
     <div className="mx-auto max-w-6xl px-4 py-16">
       <h1 className="text-4xl md:text-5xl mb-8">Rotorblattinspektionen</h1>
 
-      <div className="relative h-72 md:h-96 w-full mb-12">
-        <Image
-          src="/images/windkraft-seilzugang-1.jpg"
-          alt="Seilzugangstechniker bei der Wartung eines Rotorblatts an einer Windkraftanlage"
-          fill
-          sizes="(min-width: 768px) 1152px, 100vw"
-          className="object-cover rounded-[var(--radius-sharp)]"
-        />
+      <div className="grid gap-8 md:grid-cols-2 mb-12">
+        <div className="relative h-72 w-full">
+          <Image
+            src="/images/windenergie-anlage-uebersicht.jpg"
+            alt="Windenergieanlage in der Totalen vor bewölktem Himmel"
+            fill
+            sizes="(min-width: 768px) 576px, 100vw"
+            className="object-cover rounded-[var(--radius-sharp)]"
+          />
+        </div>
+        <div className="relative h-72 w-full">
+          <Image
+            src="/images/windenergie-rotorblatt-innenansicht.jpg"
+            alt="Blick in das Innere eines Rotorblatts bei der Inspektion"
+            fill
+            sizes="(min-width: 768px) 576px, 100vw"
+            className="object-cover rounded-[var(--radius-sharp)]"
+          />
+        </div>
       </div>
 
       <div className="grid gap-8 md:grid-cols-2">
