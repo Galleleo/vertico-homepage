@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { COMPANY } from "@/lib/site-data";
 import "./globals.css";
 
-const SITE_URL = "https://vertico-spezialtechnik.de";
+const SITE_URL = "https://www.vertico-spezialtechnik.de";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
