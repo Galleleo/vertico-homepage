@@ -4,7 +4,7 @@ export const COMPANY = {
   street: "Lehnstedter Weg 12",
   zip: "27628",
   city: "Hagen im Bremischen",
-  email: "s.lenz@vertico-spezialtechnik.de",
+  email: "info@vertico-spezialtechnik.de",
   phone: "+49 1514 0154403",
 } as const;
 

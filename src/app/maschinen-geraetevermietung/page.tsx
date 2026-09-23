@@ -23,7 +23,7 @@ const CATEGORIES = [
     name: "Bautrockner / Trocknungstechnik",
     exampleImage: "/images/mietpark-bautrockner-beispiel.png",
   },
-  { Icon: ChipperIcon, name: "Häcksler" },
+  { Icon: ChipperIcon, name: "Häcksler", realImage: "/images/haecksler.jpg" },
   {
     Icon: TrailerIcon,
     name: "Anhänger",
@@ -58,9 +58,16 @@ export default function MaschinenGeraetevermietungPage() {
 
       <h2 className="text-2xl mb-6">Mietangebot</h2>
       <ul className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 mb-4">
-        {CATEGORIES.map(({ Icon, name, exampleImage }) => (
+        {CATEGORIES.map(({ Icon, name, exampleImage, realImage }) => (
           <li key={name} className="border border-border rounded-[var(--radius-sharp)] p-5">
-            {exampleImage ? (
+            {realImage ? (
+              <div className="flex items-center gap-3">
+                <div className="relative h-14 w-14 shrink-0 rounded-[var(--radius-sharp)] overflow-hidden bg-surface-alt">
+                  <Image src={realImage} alt="" fill sizes="56px" className="object-cover" />
+                </div>
+                <span className="font-body text-sm">{name}</span>
+              </div>
+            ) : exampleImage ? (
               <div className="flex items-center gap-3">
                 <div className="relative h-14 w-14 shrink-0 rounded-[var(--radius-sharp)] overflow-hidden bg-surface-alt">
                   <Image src={exampleImage} alt="" fill sizes="56px" className="object-contain" />

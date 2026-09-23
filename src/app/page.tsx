@@ -3,7 +3,6 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { WhyVertico } from "@/components/WhyVertico";
 import { PersonalPromise } from "@/components/PersonalPromise";
 import { CtaButton } from "@/components/CtaButton";
-import { DryerIcon } from "@/components/icons/MachineIcons";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata = buildMetadata({
@@ -61,7 +60,7 @@ export default function Home() {
             media={{
               type: "image",
               src: "/images/baumfaellung-kevin-1.jpg",
-              alt: "Baumkletterer in Seilzugangstechnik lächelt bei der Arbeit hoch oben in einem Baum",
+              alt: "Baumkletterer in Seilzugangstechnik bei der Arbeit hoch oben in einem Baum",
             }}
           />
           <div className="mt-4">
@@ -74,7 +73,11 @@ export default function Home() {
             href="/maschinen-geraetevermietung"
             title="Maschinen- & Gerätevermietung"
             description="Ausgewählte Maschinen, Geräte, Anhänger und Baustellentechnik flexibel und unkompliziert mieten."
-            media={{ type: "icon", icon: <DryerIcon className="h-full w-full" /> }}
+            media={{
+              type: "image",
+              src: "/images/haecksler.jpg",
+              alt: "Häcksler von VERTICO",
+            }}
           />
           <div className="mt-4">
             <CtaButton href="/maschinen-geraetevermietung">Mietpark entdecken</CtaButton>
