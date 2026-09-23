@@ -1,1 +1,1 @@
-export const BASE_PATH = "/vertico-homepage";
+export const BASE_PATH = "";
